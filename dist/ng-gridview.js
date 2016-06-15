@@ -55,7 +55,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	exports.MODULE_NAME = 'ngFancy.GridView';
+	exports.NgGridView = 'ngFancy.GridView';
 	var DATA_LIST = 'list';
 	var ROW_HEIGHT = 'rowHeight';
 	var COLUMN_COUNT = 'columnCount';
@@ -148,16 +148,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	    GridView.prototype.getDataList = function () {
 	        return this.$scope[DATA_LIST];
-	    };
-	    GridView.prototype.recycleChild = function (position, childElement) {
-	        var childTop = childElement['viewOffsetY'];
-	        var childBottom = childElement['viewOffsetY'] + childElement['viewHeight'];
-	        var currentScrollTop = this.hostElement.scrollTop;
-	        if ((currentScrollTop > childBottom) || ((currentScrollTop + this.hostHeight) < childTop)) {
-	            this.recycler.recycleView(position, this.childrenHolder.removeChild(childElement));
-	            return true;
-	        }
-	        return false;
 	    };
 	    GridView.prototype.getView = function (position) {
 	        var dataList = this.getDataList();
@@ -267,7 +257,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return GridView;
 	}());
 	exports.GridView = GridView;
-	angular.module(exports.MODULE_NAME, [])
+	angular.module(exports.NgGridView, [])
 	    .directive('ngGridview', ['$timeout', function ($timeout) {
 	        return {
 	            restrict: 'E',

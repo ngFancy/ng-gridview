@@ -10,9 +10,17 @@ An infinite grid view for angular 1.x
 
 ##Usage
 
-###Install
+Install from npm
 
 ```
-npm install @ngFancy/ng-gridview
+npm install @ngFancy/ng-gridview --save
 ```
 
+Add as an angular dependency.
+
+```Typescript
+import {MODULE_NAME} from '@ngFancy/ng-gridview';
+
+angular.module('myApp', [MODULE_NAME]);
+
+```

@@ -1,4 +1,4 @@
-export var MODULE_NAME = 'ngFancy.GridView';
+export var NgGridView = 'ngFancy.GridView';
 
 const DATA_LIST: string = 'list';
 const ROW_HEIGHT: string = 'rowHeight';
@@ -248,7 +248,7 @@ export class GridView {
 
 }
 
-angular.module(MODULE_NAME, [])
+angular.module(NgGridView, [])
     .directive('ngGridview', ['$timeout', ($timeout) => {
         return {
             restrict: 'E',

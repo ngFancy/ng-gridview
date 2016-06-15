@@ -1,4 +1,4 @@
-export declare var MODULE_NAME: string;
+export declare var NgGridView: string;
 /**
  * keep the reference of child view detached from GridView.
  * when volume limit is exceed, remove the farthest view from current center position
@@ -40,7 +40,6 @@ export declare class GridView {
     private applyTransform(view, x, y);
     protected dispatchLayout(view: HTMLElement, addBefore: boolean): void;
     private getDataList();
-    private recycleChild(position, childElement);
     private getView(position);
     private insertView(startIndex, endIndex);
     private findCurrentIndexRange();

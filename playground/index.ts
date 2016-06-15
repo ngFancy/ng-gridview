@@ -1,11 +1,11 @@
 import 'angular';
 import 'rxjs';
-import {MODULE_NAME} from '../src/gridview';
+import {NgGridView} from '../src/gridview';
 
 require('../src/gridview.scss');
 require('./style.scss');
 
-angular.module('exampleApp', [MODULE_NAME])
+angular.module('exampleApp', [NgGridView])
     .controller('MainCtrl', ['$scope', ($scope) => {
         let cellList = [];
         for(let i = 0; i < 200; i++) {
