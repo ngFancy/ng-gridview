@@ -129,17 +129,6 @@ export class GridView {
     private getDataList(): any[] {
         return <any[]> this.$scope[DATA_LIST];
     }
-
-    private recycleChild(position: number, childElement: Element): boolean {
-        let childTop = childElement['viewOffsetY'];
-        let childBottom = childElement['viewOffsetY'] + childElement['viewHeight'];
-        let currentScrollTop = this.hostElement.scrollTop;
-        if((currentScrollTop > childBottom) || ((currentScrollTop + this.hostHeight) < childTop)) {
-           this.recycler.recycleView(position, <Element> this.childrenHolder.removeChild(childElement));
-           return true;
-        }
-        return false;
-    }
     
     private getView(position: number): Element {
         let dataList = this.getDataList();

@@ -24,7 +24,6 @@
     "postinstall": "npm run typings -- install"
   },
   "dependencies": {
-    "rxjs": "^5.0.0-beta.6"
   },
   "devDependencies": {
     "angular": "^1.5.3",

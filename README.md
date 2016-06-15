@@ -1,6 +1,6 @@
 #ngGridView
 
-An infinite grid view for angular 1.5
+An infinite grid view for angular 1.x
 
 ##Features:
 
