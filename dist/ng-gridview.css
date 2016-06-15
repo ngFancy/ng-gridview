@@ -1,0 +1,11 @@
+.gridview-wrapper {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden; }
+  .gridview-wrapper .scroll-layer {
+    position: relative;
+    display: block; }
+  .gridview-wrapper .children-holder {
+    position: absolute;
+    display: block;
+    width: 100%; }

@@ -1,5 +1,4 @@
 import 'angular';
-import 'rxjs';
 import {NgGridView} from '../src/gridview';
 
 require('../src/gridview.scss');

@@ -34,7 +34,11 @@ angular.module('myApp', [MODULE_NAME])
     });
 ```
 
-If you are using webpack, require the `ng-gridview.scss`.
+If you are using webpack, require the `ng-gridview.scss`. or reference the css in your html
+
+```html
+<link rel="stylesheet" href="node_modules/dist/ng-gridview.css">
+```
 
 define your template.
 
