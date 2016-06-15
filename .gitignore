@@ -3,7 +3,7 @@
 .vscode
 playground/*.d.ts
 playground/*.js
-playground/*.js
+playground/*.js.map
 src/*.d.ts
 src/*.js
 src/*.js.map
