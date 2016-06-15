@@ -4,7 +4,7 @@ This is the design specification for ng-gridview. It describes the goal for desi
 
 ##Goal
 
-The ng-gridview component is a **infinite grid view** for angular 1.x
+The ng-gridview component is a **infinite grid view** for angular 1.x, the performance is always the first concern
 
 - It can provide the smooth scrolling for super large dataset. but not fit for frequently changed dataset.
 - The grid template can be any angular directive or DOM node except for text node.
@@ -45,3 +45,12 @@ This diagram demostrates the position theory
 ![layout](gridview-layout.png)
 
 ###Recycler
+
+To improve rendering performance when user scroll between two directions, a cache for detached cells is required. when user
+scroll back to a position which is rendered with cells just a moment ago. it is faster to re-attach the old cells from that
+position than render a brand new cell.
+
+To satisfy the requirements for recycling cells, a recycler should 
+- record the position for each detached cell.
+- retrieve cells according to given position. when no recycled cell is found for a given position, a `null` is returned.
+- should limit the recycled cells number, when limit is exceed, the recycler should be able to clean the unused cells to keep small memory usage. 
