@@ -103,7 +103,7 @@ module.exports = {
 
             {
                 test: /\.scss/,
-                loader: 'style-loader!css-loader!sass-loader'
+                loader: 'css-loader!sass-loader'
             },
             {
                 test: /\.eot(\?.+)?$/,
@@ -128,6 +128,9 @@ module.exports = {
         new CopyWebpackPlugin([{
             from: 'src/gridview.d.ts',
             to: './ng-gridview.d.ts'
+        }, {
+            from: 'src/gridview.scss',
+            to: './ng-gridview.scss'
         }])
     ],
     
