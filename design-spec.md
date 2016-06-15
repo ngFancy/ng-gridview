@@ -19,3 +19,29 @@ The scroll space is calculated base on the `rowHeight`, `columnCount` and the si
 will be calculated once both the three factor is ready. Once any factor is changed, it is required to recalculate the
 scroll space and relayout
 
+###Grid cell positioning
+
+Thanks to the predefined `rowHeight` and `columnCount`, all the grid cell position can be calculated according to its index
+ in dataset. the is a compromise for flexibility of grid size, means it is not allow the change grid size for each grid.
+
+Because we have already calculate the total height of the grid cell holder, so the actual positioning operation is translate
+the grid cell by its top left corner.
+
+First, calcalute the current scrollTop of wrapper (This operation will force a relayout which may impact the rendering
+performance) then calculate the first row index and last row index which is the row just leaving current screen bound.
+then we can get the start index and end index to be rendered.
+
+Then, iterating the existing grid cells, recycle any grid cell which index is out of the range of we just calculated. The
+recycled cells may be reused in the future, so we need to implement a Recycler(see the section below)
+
+The last job is insert new cells to cell holder. this operation have two strategies depend on whether there are cells
+ in holder.
+
+- If there are cells in holder, then insert cells from start index to the first existing cell index.
+- If the holder is empty, insert cells from start index to the end index.
+
+This diagram demostrates the position theory
+
+![layout](gridview-layout.png)
+
+###Recycler
