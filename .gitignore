@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+.vscode
+playground/*.d.ts
+playground/*.js
+playground/*.js
+src/*.d.ts
+src/*.js
+src/*.js.map
+node_modules
+typings

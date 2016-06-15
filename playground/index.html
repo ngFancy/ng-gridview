@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="exampleApp" ng-strict-di="true">
+<head>
+    <meta charset="UTF-8">
+    <title>Uploader Examples</title>
+</head>
+<body>
+<div class="uploader-container" ng-controller="MainCtrl">
+<ng-gridview list="dataList" row-height="200" column-count="2">
+    <div class="grid-cell">
+        {{$data.name}}
+    </div>
+</ng-gridview>
+</div>
+</body>
+</html>
