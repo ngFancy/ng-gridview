@@ -19,9 +19,9 @@ npm install @ngFancy/ng-gridview --save
 Add as an angular dependency.
 
 ```Typescript
-import {MODULE_NAME} from '@ngFancy/ng-gridview';
+import {ngGridView} from '@ngFancy/ng-gridview';
 // angular should be available in GLOBAL
-angular.module('myApp', [MODULE_NAME])
+angular.module('myApp', [ngGridView])
     .controller('MainCtrl', () => {
         var $ctrl = this;
         var dataList = [];

@@ -55,7 +55,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	exports.NgGridView = 'ngFancy.GridView';
 	var DATA_LIST = 'list';
 	var ROW_HEIGHT = 'rowHeight';
 	var COLUMN_COUNT = 'columnCount';
@@ -257,7 +256,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return GridView;
 	}());
 	exports.GridView = GridView;
-	angular.module(exports.NgGridView, [])
+	exports.ngGridView = angular.module('ngFancy.GridView', [])
 	    .directive('ngGridview', ['$timeout', function ($timeout) {
 	        return {
 	            restrict: 'E',
@@ -302,7 +301,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                });
 	            }
 	        };
-	    }]);
+	    }])
+	    .name;
 	
 
 /***/ },

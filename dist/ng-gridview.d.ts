@@ -1,4 +1,3 @@
-export declare var NgGridView: string;
 /**
  * keep the reference of child view detached from GridView.
  * when volume limit is exceed, remove the farthest view from current center position
@@ -48,3 +47,4 @@ export declare class GridView {
     clearLayout(): void;
     measure(horizontalGutter: number, verticalGutter: number): void;
 }
+export declare const ngGridView: string;
