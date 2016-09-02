@@ -1,0 +1,12 @@
+.vscode
+playground
+typings
+node_modules
+design-spec.md
+gridview-layout.png
+gridview-layout.xml
+helpers.js
+tsconfig.json
+typings.json
+webpack.build.js
+webpack.dev.js
