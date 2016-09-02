@@ -1,6 +1,6 @@
 {
-  "name": "ng-gridview",
-  "version": "0.1.0",
+  "name": "@ngfancy/ng-gridview",
+  "version": "0.2.0",
   "license": "MIT",
   "author": "Bob",
   "scripts": {
